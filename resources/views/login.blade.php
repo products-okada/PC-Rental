@@ -12,9 +12,11 @@
 </head>
 <body style="text-align:center">
 <p>名前を入力して「次へ」を押してください</p>
+<form method=post>
+    @csrf
 <table border=1 style="text-align:center; margin:auto;">
 	<tr>
-		<th><input name="input_id" type="text" value="" placeholder="名前を入力"></th>
+		<th><input name="username" type="text" value="" placeholder="名前を入力"></th>
 	</tr>
 </table>
 <input type="submit" value="次へ">

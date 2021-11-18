@@ -5,11 +5,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 Route::get('/login',[LoginController::class, 'index']);
 
+Route::post('/login',[LoginController::class, 'setusername']);
+
 use App\Http\Controllers\ListController;
 Route::get('/list',[ListController::class, 'index']);
 
 use App\Http\Controllers\LogController;
 Route::get('/log',[LogController::class, 'index']);
+
 
 /*
 |--------------------------------------------------------------------------

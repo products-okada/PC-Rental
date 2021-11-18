@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class ListController extends Controller
 {
-    public function index(){
-        return view('list');
+    public function index(Request $request){
+//        dd($request->session()->get('user')); 
+        return view('list', ['user' => $request->session()->get('user')]);
     }
 }
