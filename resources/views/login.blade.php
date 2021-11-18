@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="content-type" content= "text/html; charset= utf-8">
 <style type ="text/css">
-   h1 { font-size:190%; color:#800000; }
+   h1 { font-size:190%; color:#000000; }
 </style>
 <h1>モバイルPC貸出管理システム</h1>
 </head>
