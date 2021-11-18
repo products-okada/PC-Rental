@@ -32,17 +32,15 @@
                         <tr>
                             <td class="p-4 w-1/3 align-middle text-center">{{ $pcList->pcid }}</td>
                             <td class="p-4 w-1/3 align-middle text-center">
-                            @if( $pcList->status == 1)
                                 <a  href="{{route('list')}}"
-                                    class="btn btn-primary">
-                                    {{ $status[$pcList->status] }}
+                                    @if( $pcList->status == 1)
+                                        class="btn btn-primary">
+                                        {{ $status[$pcList->status] }}
+                                    @else
+                                        class="btn btn-danger">
+                                        {{ $status[$pcList->status] }}
+                                    @endif
                                 </a>
-                            @else
-                                <a  href="{{route('list')}}"
-                                    class="btn btn-danger">
-                                    {{ $status[$pcList->status] }}
-                                </a>
-                            @endif
                             </td>
                             <td class="p-4 w-1/3 align-middle text-center">{{ $pcList->user }}<br>{{ $pcList->update }}</td>
                         </tr>
