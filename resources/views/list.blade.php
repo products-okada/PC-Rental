@@ -17,9 +17,9 @@
     <body>
         <div class="container mx-auto">
             <h1 class="mb-8">モバイルPC貸出管理</h1>            
-            <a href="{{route('log')}}" class="btn btn--orange">履歴へ</a>
+            <div class="text-right" ><a href="{{route('log')}}" class="btn btn--orange">履歴へ</a></div>
             <p>ようこそ"{{$user}}"さん</p>
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered align-middle text-center">
                 <thead>
                     <tr>
                         <th class="p-4 w-1/3">端末ID</th>
@@ -30,9 +30,21 @@
                 <tbody>
                     @foreach($pcLists as $pcList)
                         <tr>
-                            <td class="p-4 w-1/3">{{ $pcList->pcid }}</a></td>
-                            <td class="p-4 w-1/3">{{ $status[$pcList->status] }}</td>
-                            <td class="p-4 w-1/3">{{ $pcList->update }}</td>
+                            <td class="p-4 w-1/3 align-middle text-center">{{ $pcList->pcid }}</td>
+                            <td class="p-4 w-1/3 align-middle text-center">
+                            @if( $pcList->status == 1)
+                                <a  href="{{route('list')}}"
+                                    class="btn btn-primary">
+                                    {{ $status[$pcList->status] }}
+                                </a>
+                            @else
+                                <a  href="{{route('list')}}"
+                                    class="btn btn-danger">
+                                    {{ $status[$pcList->status] }}
+                                </a>
+                            @endif
+                            </td>
+                            <td class="p-4 w-1/3 align-middle text-center">{{ $pcList->user }}<br>{{ $pcList->update }}</td>
                         </tr>
                     @endforeach
                 </tbody>
