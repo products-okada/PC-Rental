@@ -10,7 +10,7 @@ use App\Http\Controllers\ListController;
 Route::get('/list',[ListController::class, 'index'])->name('list');
 
 use App\Http\Controllers\LogController;
-Route::get('/log',[LogController::class, 'index']);
+Route::get('/log',[LogController::class, 'index'])->name('log');
 
 
 /*
