@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        $this->call(MobilePcSeeder::class);
+        // $this->call(MobilePcSeeder::class);
         $this->call(RentalLogSeeder::class);
     }
 }
