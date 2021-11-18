@@ -1,1 +1,2 @@
 testList
+{{$user}}
