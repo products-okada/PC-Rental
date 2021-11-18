@@ -16,6 +16,7 @@ class CreateMobilePcTable extends Migration
         Schema::create('mobile_pc', function (Blueprint $table) {
             $table->string('pcid',20);
             $table->integer('status');
+            $table->string('user',100); 
             $table->dateTime('update');
         });
     }
