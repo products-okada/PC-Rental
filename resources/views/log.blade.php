@@ -17,8 +17,8 @@
 </head>
     <body>
         <div class="container mx-auto">
-            <h1 class="mb-8">履歴</h1>
-            <a href="http://localhost/laravel/pc_rental/public/list" class="btn btn--orange">貸出画面へ</a>
+            <h1 class="mb-8">履歴</h1>            
+            <a href="{{route('list')}}" class="btn btn--orange">貸出画面へ</a>
             <p style="text-align: right">{{$logItems->links()}}</p>
             <table class="table table-striped table-bordered">
                 <thead>
