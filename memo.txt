@@ -1,0 +1,15 @@
+リファレンスなども見てみたのですが、breeze を使ってx-guest-layout などで利用できる bladeファイルだけを出力する方法がなさそうでした。
+
+以下の手順で、breezeから必要なレイアウトデータを取り出してください。
+
+　1. composer require laravel/breeze --dev を実行する
+　2. 編集済みのweb.php を、web.php_copyなどにして複製しておく
+　3. php artisan breeze:install を実行
+　4. 複製したweb.php_copyの内容で、変更された web.php を上書きする
+　5. npm install と npm run dev を実行
+
+web.php は、認証の設定ファイルの読み込みなどが追加されているので、全体をを上書きしてください。
+
+以上の手順で、layoutのBladeファイルが生成され、<x-guest-layout> タグなどが利用できるようになります。
+$status = ["貸出", "返却"];
+$status[0]
