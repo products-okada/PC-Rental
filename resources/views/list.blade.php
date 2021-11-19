@@ -32,7 +32,8 @@
                         <tr>
                             <td class="p-4 w-1/3 align-middle text-center">{{ $pcList->pcid }}</td>
                             <td class="p-4 w-1/3 align-middle text-center">
-                                <a  href="{{route('list')}}"
+                                <!-- <a  href="{{route('list')}}" -->
+                                <a  href="{{route('list')}}/status_change/{{ $pcList->pcid }}"
                                     @if( $pcList->status == 1)
                                         class="btn btn-primary">
                                         {{ $status[$pcList->status] }}
