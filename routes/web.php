@@ -8,6 +8,7 @@ Route::post('/login',[LoginController::class, 'setusername']);
 
 use App\Http\Controllers\ListController;
 Route::get('/list',[ListController::class, 'index'])->name('list');
+Route::get('/list/status_change/{pcid?}', [ListController::class, 'status_change']);
 
 use App\Http\Controllers\LogController;
 Route::get('/log',[LogController::class, 'index'])->name('log');
