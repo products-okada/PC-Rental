@@ -12,6 +12,5 @@ class Mobile extends Model
     protected $table = 'mobile_pc';
     protected $primaryKey = 'pcid';
     public $timestamps = false;
-    // const UPDATED_AT = 'update';
 
 }

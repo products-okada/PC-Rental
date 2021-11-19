@@ -19,7 +19,6 @@ class ListController extends Controller
         $change_record = Mobile::where('pcid', $pcid)->first();
         $status = $change_record->status;
 
-
         //ステータスの変更
         if($status == 0){
             $status = 1;
